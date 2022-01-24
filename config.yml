@@ -1,0 +1,47 @@
+---
+configure_dotfiles: no
+configure_dock: true
+dockitems_remove:
+ - Launchpad
+ - TV
+ - Podcasts
+
+dockitems_persist:
+  - name: "Chrome"
+    path: "/Applications/Slack.app/"
+    pos: 2
+  - name: "Slack"
+    path: "/Applications/Slack.app/"
+    pos: 4
+  - name: "Sublime Text"
+    path: "/Applications/Sublime Text.app/"
+    pos: 9
+    
+homebrew_installed_packages:
+  - asdf
+  - aws-sam-cli
+  - awscli
+  - elixir
+  - git
+  - go@1.16
+  - gradle@6
+  - gti
+  - maven
+  - monbogdb-community
+  - mongodb-database-tools
+  - python
+  - redis
+  - tomcat@9
+  - yarn
+
+homebrew_cask_apps:
+  - alfred
+  - cyberduck
+  - docker
+  - firefox
+  - flycut
+  - google-chrome
+  - mountain-duck
+  - slack
+  - sublime-text
+  - transmit
