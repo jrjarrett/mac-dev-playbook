@@ -34,7 +34,7 @@ homebrew_installed_packages:
   - gradle@6
   - gti
   - maven
-  - monbogdb-community
+  - mongodb-community
   - mongodb-database-tools
   - python
   - redis

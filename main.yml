@@ -51,6 +51,6 @@
         loop_var: outer_item
       with_fileglob: "{{ post_provision_tasks|default(omit) }}"
       tags: [ 'post' ]
-  
-    - import_tasks: tasks/config-tomcat-ssl.yml
-      tags: [ 'configure-tomcat' ]
+
+  post_provision_tasks:
+    -tasks/config-tomcat-ssl.yml
