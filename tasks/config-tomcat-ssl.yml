@@ -1,7 +1,23 @@
 ---
 - name Generate keystore file
-  command: "sh keytool -genkeypair -keyalg RSA -keystore .keystore -validity 1000 -storetype pkcs12 password password localhost fetch fetch Madison Wisconsin US yes password password"
+  expect:
+    command: keytool -genkeypair -keyalg RSA -keystore .keystore -validity 1000 -storetype pkcs12
+    responses:
+      "Enter keystore password:": "password"
+        "Re-enter new password:": "password"
+        "What is your first and last name?\n[Unknown]:": "localhost"
+        "What is the name of your organizational unit?\n[Unknown]:": "fetch"
+        "What is the name of your organization?\n[Unknown]:": "fetch"
+        "What is the name of your City or Locality?\n[Unknown]:": "Madison"
+        "What is the name of your State or Province?\n[Unknown]:": "Wisconsin"
+        "What is the two-letter country code for this unit?\n[Unknown]:": "US"
+        "Is CN=localhost, OU=Fetch, O=Fetch, L=Madison, ST=Wisconsin, C=US correct?\n[no]:": "yes"
+
 - name Generate cert
-  command "sh keytool -export -file .keytool_cert.cer -keystore .keystore"
+  expect:
+    command: keytool -export -file .keytool_cert.cer -keystore .keystore
+    responses:
+      "Enter keystore password:": "password"
+
 - name Import cert
-  command "sh sudo keytool -importcert -alias localssl -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file .keytool_cert.cer"
+  command: "sh sudo keytool -importcert -alias localssl -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file .keytool_cert.cer"
