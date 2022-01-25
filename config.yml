@@ -43,13 +43,13 @@ homebrew_installed_packages:
 
 homebrew_cask_apps:
   - alfred
-    - cyberduck
-    - docker
-    - firefox
-    - flycut
-    - google-chrome
-    - mountain-duck
   - adoptopenjdk8
-    - slack
-    - sublime-text
-    - transmit
+  - cyberduck
+  - docker
+  - firefox
+  - flycut
+  - google-chrome
+  - mountain-duck
+  - slack
+  - sublime-text
+  - transmit
