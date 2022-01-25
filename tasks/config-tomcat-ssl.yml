@@ -1,0 +1,7 @@
+---
+- name Generate keystore file
+  command: "sh keytool -genkeypair -keyalg RSA -keystore .keystore -validity 1000 -storetype pkcs12 password password localhost fetch fetch Madison Wisconsin US yes password password"
+- name Generate cert
+  command "sh keytool -export -file .keytool_cert.cer -keystore .keystore"
+- name Import cert
+  command "sh sudo keytool -importcert -alias localssl -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -file .keytool_cert.cer"
