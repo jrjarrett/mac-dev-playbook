@@ -33,7 +33,6 @@ homebrew_installed_packages:
   - go@1.16
   - gradle@6
   - gti
-  - maven
   - mongodb-community
   - mongodb-database-tools
   - python
@@ -43,7 +42,6 @@ homebrew_installed_packages:
 
 homebrew_cask_apps:
   - alfred
-  - adoptopenjdk8
   - cyberduck
   - docker
   - firefox
@@ -55,4 +53,5 @@ homebrew_cask_apps:
   - transmit
 
 post_provision_tasks:
+  - tasks/config-devtools-asdf.yml
   - tasks/config-tomcat-ssl.yml

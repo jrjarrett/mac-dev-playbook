@@ -1,0 +1,23 @@
+---
+- name: ASDF - install Java plugin
+  command: "asdf plugin add java"
+
+- name: ASDF - install Maven plugin
+  command: "asdf plugin add maven"
+
+- name: ASDF - install Java 8
+  command: asdf install java adoptopenjdk-8.0.312+7
+
+- name: ASDF - Make Java 8 default JDK
+  command: asdf global java adoptopenjdk-8.0.312+7
+
+- name: ASDF - install Maven
+  command: asdf install maven 3.8.4
+
+- name: ASDF - Make Maven version global
+  command: asdf global maven 3.8.4
+
+- name: Use asdf to set JAVA_HOME
+    ansible.builtin.lineinfile:
+      path: ~/.zshrc
+      line: ". ~/.asdf/plugins/java/set-java-home.zsh"
