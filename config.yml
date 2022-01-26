@@ -7,15 +7,13 @@ dockitems_remove:
   - Podcasts
 
 dockitems_persist:
-  - name: "Slack"
-    path: "/Applications/Slack.app/"
-    pos: 2
-  - name: "Chrome"
-    path: "/Applications/Google Chrome.app/"
-    pos: 4
   - name: "Sublime Text"
     path: "/Applications/Sublime Text.app/"
     pos: 6
+  - name: "Firefox"
+    path: "/Applications/Sublime Text.app/"
+    pos: 3
+
 
 homebrew_taps:
   - homebrew/core
@@ -46,9 +44,7 @@ homebrew_cask_apps:
   - docker
   - firefox
   - flycut
-  - google-chrome
   - mountain-duck
-  - slack
   - sublime-text
   - transmit
 
