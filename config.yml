@@ -1,5 +1,5 @@
 ---
-configure_dotfiles: no
+configure_dotfiles: false
 configure_dock: true
 dockitems_remove:
   - Launchpad
@@ -7,15 +7,15 @@ dockitems_remove:
   - Podcasts
 
 dockitems_persist:
-  - name: "Chrome"
-    path: "/Applications/Slack.app/"
-    pos: 2
   - name: "Slack"
     path: "/Applications/Slack.app/"
+    pos: 2
+  - name: "Chrome"
+    path: "/Applications/Google Chrome.app/"
     pos: 4
   - name: "Sublime Text"
     path: "/Applications/Sublime Text.app/"
-    pos: 9
+    pos: 6
 
 homebrew_taps:
   - homebrew/core
@@ -53,3 +53,6 @@ homebrew_cask_apps:
   - slack
   - sublime-text
   - transmit
+
+post_provision_tasks:
+  - tasks/config-tomcat-ssl.yml

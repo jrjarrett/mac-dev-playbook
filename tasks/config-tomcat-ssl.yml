@@ -1,17 +1,7 @@
 ---
 - name: Generate keystore file
   expect:
-    command: keytool -genkeypair -keyalg RSA -keystore .keystore -validity 1000 -storetype pkcs12
-    responses:
-      "Enter keystore password:": "password"
-      "Re-enter new password:": "password"
-      "What is your first and last name?\n[Unknown]:": "localhost"
-      "What is the name of your organizational unit?\n[Unknown]:": "fetch"
-      "What is the name of your organization?\n[Unknown]:": "fetch"
-      "What is the name of your City or Locality?\n[Unknown]:": "Madison"
-      "What is the name of your State or Province?\n[Unknown]:": "Wisconsin"
-      "What is the two-letter country code for this unit?\n[Unknown]:": "US"
-      "Is CN=localhost, OU=Fetch, O=Fetch, L=Madison, ST=Wisconsin, C=US correct?\n[no]:": "yes"
+    command: "sh keytool -genkeypair -keyalg RSA -keystore .keystore -validity 1000 -storetype pkcs12 -dname \"CN=localhost, OU=Fetch, O=Fetch, L=Madison, ST=Wisconsin, C=US\" -storepass password -keypass password"
 
 - name: Generate cert
   expect:
