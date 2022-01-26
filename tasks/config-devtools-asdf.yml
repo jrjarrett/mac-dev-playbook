@@ -18,6 +18,6 @@
   command: asdf global maven 3.8.4
 
 - name: Use asdf to set JAVA_HOME
-    ansible.builtin.lineinfile:
-      path: ~/.zshrc
-      line: ". ~/.asdf/plugins/java/set-java-home.zsh"
+  ansible.builtin.lineinfile:
+    path: ~/.zshrc
+    line: ". ~/.asdf/plugins/java/set-java-home.zsh"
