@@ -6,13 +6,6 @@ dockitems_remove:
   - TV
   - Podcasts
 
-dockitems_persist:
-  - name: "Sublime Text"
-    path: "/Applications/Sublime Text.app/"
-    pos: 6
-  - name: "Firefox"
-    path: "/Applications/Sublime Text.app/"
-    pos: 3
 
 
 homebrew_taps:
@@ -25,6 +18,7 @@ homebrew_installed_packages:
   - asdf
   - aws-sam-cli
   - awscli
+  - diffmerge
   - elixir
   - git
   - go@1.16
