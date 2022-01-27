@@ -18,7 +18,6 @@ dockitems_persist:
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
-  - AdoptOpenJDK/openjdk
   - aws/tap
   - mongodb/brew
 
